@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="main">
+        <div class="img loading"></div>
+        <h1 class="heading loading"></h1>
+        <p class="content loading"></p>
+    </div>
+  
+    <script>
+
+        setTimeout(() => {
+         fetchData()
+        }, 2000)
+       
+
+        function fetchData() {
+        const img = document.querySelector('.img')
+        const heading = document.querySelector('.heading')
+        const content = document.querySelector('.content')
+
+        img.innerHTML = "<img src= 'https://picsum.photos/340/200' / >"
+        img.classList.remove('loading')
+
+        heading.innerHTML = "some title"
+        heading.classList.remove('loading')
+
+        content.innerHTML = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia, "
+        content.classList.remove('loading')
+        }
+
+        
+
+        
+
+    </script>
+</body>
+</html>
